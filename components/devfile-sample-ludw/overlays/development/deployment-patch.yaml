@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-ludw
+  namespace: marialeonova-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:aa1acc7dc19efb5ab9437b19adf396ec9c9c4f0719220652cae63ff6b2ae7618
+        name: my-nodejs
+        resources: {}
+status: {}
