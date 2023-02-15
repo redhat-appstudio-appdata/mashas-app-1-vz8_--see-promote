@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-ludw
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-ludw
+    app.kubernetes.io/part-of: mashas-app-1
+  name: devfile-sample-ludw
+  namespace: marialeonova-tenant
+spec:
+  ports:
+  - port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-ludw
+status:
+  loadBalancer: {}
