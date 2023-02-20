@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-python-basic-fthm
+  namespace: marialeonova-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:8ea13150c3310bd9d1f84014651397ea375b44e4be794337e1a428e49a2a6b5f
+        name: my-python
+        resources: {}
+status: {}
